@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+    font-family: 'Netflix Sans', sans-serif; 
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    position: absolute; /* Position over the hero section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #e50914; 
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin-right: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    opacity: 1;
+}
+
+.sign-in-btn {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 7px 17px;
+    font-weight: 600;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.hero-background {
+    width: 100%;
+    height: 100%;
+    background-image: url('./Pictures/download.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 -150px 100px -50px rgba(0, 0, 0, 1);
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+/* --- Content Overlay (Text and Buttons) --- */
+.hero-content {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    width: 35%; 
+    z-index: 5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.title {
+    font-size: 5em;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #c0c0c0;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.1em;
+    line-height: 1.4;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+.watch-now-btn {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.watch-now-btn:hover {
+    background-color: #ff3333;
+}
+
+.trailer-link {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.trailer-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-bottom: 2px solid white;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.trailer-link a:hover {
+    opacity: 1;
+}
